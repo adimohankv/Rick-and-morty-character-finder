@@ -1,0 +1,37 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ character.name }} </mat-card-title>
+    <mat-card-subtitle>id: {{ character.id }} - created: {{ character.created | fromNow }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <img mat-card-image src="{{character.image}}" alt="{{character.name}}" class="character-img">
+    <div class="character-details">
+      <ul>
+        <li>
+          <span class="key">STATUS</span>
+          <span class="value">{{ character.status }}</span>
+        </li>
+        <mat-divider></mat-divider>
+        <li>
+          <span class="key">SPECIES</span>
+          <span class="value">{{ character.species }}</span>
+        </li>
+        <mat-divider></mat-divider>
+        <li>
+          <span class="key">GENDER</span>
+          <span class="value">{{ character.gender }}</span>
+        </li>
+        <mat-divider></mat-divider>
+        <li>
+          <span class="key">ORIGIN</span>
+          <span class="value">{{ character.origin.name }}</span>
+        </li>
+        <mat-divider></mat-divider>
+        <li>
+          <span class="key">LAST KNOWN LOCATION</span>
+          <span class="value">{{ character.location.name }}</span>
+        </li>
+      </ul>
+    </div>
+  </mat-card-content>
+</mat-card>

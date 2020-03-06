@@ -1,0 +1,9 @@
+<h2 class="selected-filters-header">Selected Filters</h2>
+<div class="selected-filters-container">
+  <mat-chip-list>
+    <mat-chip *ngFor="let selectedFilters of selectedFilters" (removed)="removeFilter(selectedFilters.key)" color="primary" selected>
+      {{ selectedFilters .value }}
+      <mat-icon matChipRemove>cancel</mat-icon>
+    </mat-chip>
+  </mat-chip-list>
+</div>

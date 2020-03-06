@@ -1,0 +1,15 @@
+<mat-form-field class="search-form-field">
+  <mat-label>Search by Name</mat-label>
+  <input matInput type="text" [(ngModel)]="value" (ngModelChange)="onInputChange()">
+  <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="onCloseButtonClick()">
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>
+<mat-form-field class="sort-form-filed">
+  <mat-label>Sort by ID</mat-label>
+  <mat-select [(value)]="sortBy">
+    <mat-option value="asscending">Asscending</mat-option>
+    <mat-option value="decending">Decending</mat-option>
+  </mat-select>
+</mat-form-field>
+<!-- <ng-container *ngTemplateOutlet="windows ? a : b"></ng-container> -->

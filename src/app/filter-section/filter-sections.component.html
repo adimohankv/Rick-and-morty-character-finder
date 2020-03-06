@@ -1,0 +1,42 @@
+<div class="filters">
+  <h2 class="filter-heading">Filters</h2>
+  <div class="filter-sections" *ngFor="let filterSections of filterData">
+    <h3 class="filter-sec-heading">{{ filterSections.filterTypeName }}</h3>
+    <mat-radio-group class="filter-section" (change)="updateFilterValue($event)" [name]="filterSections.filterType">
+      <mat-radio-button
+        class="filter"
+        [id]="filter.key"
+        [value]="filter.key"
+        *ngFor="let filter of filterSections.filterOptions"
+        [checked]="filter.isSelected"
+      >
+        {{ filter.value }}
+      </mat-radio-button>
+    </mat-radio-group>
+  </div>
+</div>
+<mat-expansion-panel hideToggle class="filter-sections-mobile">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Filters Characters
+    </mat-panel-title>
+    <mat-panel-description>
+      by origin and gender
+      <mat-icon>filter_list</mat-icon>
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <div class="filter-sections" *ngFor="let filterSections of filterData">
+    <h3 class="filter-sec-heading">{{ filterSections.filterTypeName }}</h3>
+    <mat-radio-group class="filter-section" (change)="updateFilterValue($event)" [name]="filterSections.filterType">
+      <mat-radio-button
+        class="filter"
+        [id]="filter.key"
+        [value]="filter.key"
+        *ngFor="let filter of filterSections.filterOptions"
+        [checked]="filter.isSelected"
+      >
+        {{ filter.value }}
+      </mat-radio-button>
+    </mat-radio-group>
+  </div>
+</mat-expansion-panel>

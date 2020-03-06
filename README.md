@@ -1,6 +1,6 @@
-# RickMortyAngularChar
+# Rick and Morty Character Finder
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2 and uses [API](https://rickandmortyapi.com/api/character/) to fetch and filter the characters
 
 ## Development server
 

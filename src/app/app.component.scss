@@ -1,0 +1,42 @@
+mat-toolbar {
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  top: 64px;
+
+  .filter-nav {
+    width: 30%;
+  }
+
+  .result-section {
+    margin-left: 250px;
+    max-width: 1400px;
+
+    .search-nav {
+      margin: 0 30px;
+    }
+  }
+
+  .selected-filters {
+    display: block;
+    height: 150px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    .filter-nav {
+      width: 100%;
+    }
+
+    .result-section {
+      margin: 0;
+    }
+  }
+}

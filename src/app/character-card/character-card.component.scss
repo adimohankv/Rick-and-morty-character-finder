@@ -1,0 +1,32 @@
+:host {
+  height: 100%;
+}
+
+mat-card mat-card-header {
+  padding-bottom: 20px;
+
+  .mat-card-header-text {
+    margin: 0;
+  }
+}
+
+.character-details {
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+
+      .key {
+        width: 40%;
+      }
+
+      .value {
+        text-align: end;
+      }
+    }
+  }
+}

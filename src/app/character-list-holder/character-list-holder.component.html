@@ -1,0 +1,11 @@
+<ul class="character-list">
+  <li class="character" *ngFor="let character of characterList?.results">
+    <app-character-card [character]="character"></app-character-card>
+  </li>
+</ul>
+<mat-paginator [length]="totalCharacters"
+  [hidePageSize]="true"
+  [pageSize]="pageSize"
+  [showFirstLastButtons]="false"
+  (page)="pageEvent = getNextPage($event)">
+</mat-paginator>

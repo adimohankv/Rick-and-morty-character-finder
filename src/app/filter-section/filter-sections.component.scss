@@ -1,0 +1,56 @@
+:host {
+  padding: 20px;
+  height: 100vh;
+  position: fixed;
+  max-width: 200px;
+  overflow: scroll;
+}
+
+.filters {
+  display: block;
+}
+
+.filter-heading {
+  border-bottom: solid #000 2px;
+}
+
+.filter-sections-mobile {
+  display: none;
+}
+
+.filter-sections {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+
+  .filter-section {
+    list-style: none;
+    padding-left: 15px;
+    flex-direction: column;
+    display: flex;
+
+    mat-radio-button {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  :host {
+    max-width: none;
+    width: 100%;
+    position: relative;
+  }
+
+  .filters {
+    display: none;
+  }
+
+  .filter-sections-mobile {
+    display: block;
+  }
+
+  mat-expansion-panel {
+    margin: 0 20px;
+  }
+}
+
